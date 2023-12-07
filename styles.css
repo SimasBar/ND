@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+.item{
+    position: relative;
+    padding: 50px;
+    max-height: 600px;
+    max-width: 600px;
+    background-color: rgba(185, 185, 185, 0.1);
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+button{
+    padding: 10px 30px;
+}
+
+h1{
+
+    margin: 0;
+    text-align: center;
+
+}
+
+.light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+}
+
+#greenLight {
+    background-color: green;
+}
+
+#redLight {
+    background-color: red;
+}
+
+#blueLight {
+    background-color: blue;
+}

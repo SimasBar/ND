@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motoro GUI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+
+
+</head>
+<body>
+    <h1>Variklio valdymo GUI</h1>
+    <div class="container">
+        <div class="item">
+            
+            <img id="motorImage" src="assets/motor.png" alt="Motor Image">
+        </div>
+        <div class="item">
+            <div id="greenLight" class="light"></div>
+            <div id="redLight" class="light"></div>
+            <div id="blueLight" class="light"></div>
+        </div>
+<div class="item">
+    <label for="lightIndicator">Variklio busena:</label>
+    <output id="motorState">Isjungtas</output>
+</div>
+        <div class="item">
+
+            <button id="onButton">On</button>
+            <button id="offButton">Off</button>
+            <button id="reverseButton">Reverse</button>
+
+
+            <label for="speedSlider">Speed:</label>
+            <output id="speedValue">1</output>
+            <input type="range" id="speedSlider" min="1" max="100" value="5">
+
+        </div>
+    </div>
+   
+    
+
+</body>
+</html>
