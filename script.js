@@ -17,7 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     redLight.style.display = 'inline-block';
     blueLight.style.display = 'none';
     motorState.textContent = 'Išjungtas';
+    speedValueDisplay.textContent = 0;
 
+    //neveikia su gif :(
+        
+    function updateAnimationSpeed() {
+        var speed = speedSlider.value / 10; 
+        motorImage.style.animationDuration = speed + 's';
+    }
 
 
     onButton.addEventListener('click', function() {
@@ -27,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
         redLight.style.display = 'none';
         blueLight.style.display = 'none';
         motorState.textContent = 'Įjungtas';
+        speedSlider.value = 100;
+        speedValueDisplay.textContent = speedSlider.value;
+        updateAnimationSpeed();
         // funkcija kuri ijungia motora
     });
 
@@ -37,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         redLight.style.display = 'inline-block';
         blueLight.style.display = 'none';
         motorState.textContent = 'Išjungtas';
+        speedSlider.value = 0;
+        speedValueDisplay.textContent = speedSlider.value;
+        updateAnimationSpeed();
         // funkcija kuri isungia motora
     });
 
@@ -47,6 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
         redLight.style.display = 'none';
         blueLight.style.display = 'inline-block';
         motorState.textContent = 'Įjungtas, reversas';
+        speedSlider.value = 100;
+        speedValueDisplay.textContent = speedSlider.value;
+        updateAnimationSpeed();
         // funkcija kuri isjungia motora, ijungia rele, ir ijungia motora
     });
 
@@ -54,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var speedValue = speedSlider.value;
         console.log('Speed slider value:', speedValue);
         speedValueDisplay.textContent = speedValue;
+        updateAnimationSpeed();
         // funkcija kuri keicia motoro greiti
     });
 });
